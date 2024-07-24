@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-    <title>BligoSoft</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta name="author" content="Bligosoft">
     @stack('meta-seo')
+    <title>@yield('title')</title>
 
     <!-- Favicons -->
     <link href={{ asset("front/assets/img/favicon.png") }} rel="icon" />

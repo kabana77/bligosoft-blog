@@ -11,8 +11,8 @@
   
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a href="index.html">Blog</a></li>
-              <li><a href="single-post.html">Portfolio</a></li>
+              <li><a href={{ url('/')  }}>Blog</a></li>
+              <li><a href={{ url('/portfolio') }}>Portfolio</a></li>
               {{-- <li class="dropdown">
                 <a href="category.html"
                   ><span>Categories</span>
@@ -40,8 +40,8 @@
                 </ul>
               </li> --}}
   
-              <li><a href="about.html">Tentang Kami</a></li>
-              <li><a href="contact.html">Kontak</a></li>
+              <li><a href={{ url('/tentang-kami') }}>Tentang Kami</a></li>
+              <li><a href={{ url('/kontak') }}>Kontak</a></li>
             </ul>
           </nav>
           <!-- .navbar -->

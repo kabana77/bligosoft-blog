@@ -18,7 +18,8 @@ class HomeController extends Controller
         return view('front.home.index', [
             'latest_posts' => $latest_posts,
             'next_posts' => $next_posts,
-            'side_list_posts' => $side_list_posts
+            'side_list_posts' => $side_list_posts,
+            'categories' => Category::all()
         ]);
     }
 }

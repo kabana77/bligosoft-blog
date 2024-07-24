@@ -1,6 +1,6 @@
 @extends('front.layout.template')
 
-@section('title', 'Artikel - Bligosoft')
+@section('title', 'Kategori - Bligosoft')
 
 @section('main')
     <main id="main">

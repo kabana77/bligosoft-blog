@@ -11,14 +11,17 @@ class ArticleController extends Controller
 {
     public function index(){
         return view('front.article.index', [
-            'articles' => Article::latest()->paginate(7),
+            'articles' => Article::where('status', 1)->latest()->paginate(7),
             'categories' => Category::latest()->get()
         ]);
     }
     
     public function show($slug){
+        $articles = Article::where('slug', $slug)->firstOrFail();
+        $articles->increment('views');
+
         return view('front.article.show', [
-            'article' => Article::where('slug', $slug)->first(),
+            'article' => $articles,
             'otherArticles' => Article::where('slug', '!=', $slug)->take(10)->get(),
             'categories' => Category::all()
         ]);

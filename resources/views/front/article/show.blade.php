@@ -1,5 +1,7 @@
 @extends('front.layout.template')
 
+@section('title', $article->title.' - Bligosoft')
+
 @section('main')
     <main id="main">
         <section class="single-post-content">
@@ -9,7 +11,11 @@
       
                   <!-- ======= Single Post Content ======= -->
                   <div class="single-post">
-                    <div class="post-meta"><span class="date">{{ $article->category->name }}</span> <span class="mx-1">&bullet;</span> <span>{{  $article->created_at->format('Y F d') }}</span></div>
+                    <div class="post-meta">
+                      <span class="date">{{ $article->category->name }}</span>
+                      <span class="mx-1">&bullet;</span> <span>{{  $article->created_at->format('Y F d') }}</span>
+                      <span class="mx-1">&bullet;</span> <span class="date">{{ $article->views }}x Views</span>
+                    </div>
                     <h1 class="mb-5">{{ $article->title }}</h1>
                     {{-- <p><span class="firstcharacter">L</span>orem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia sed, suscipit distinctio, numquam omnis quo fuga ipsam quis inventore voluptatum recusandae culpa, unde doloribus saepe labore alias voluptate expedita? Dicta delectus beatae explicabo odio voluptatibus quas, saepe qui aperiam autem obcaecati, illo et! Incidunt voluptas culpa neque repellat sint, accusamus beatae, cumque autem tempore quisquam quam eligendi harum debitis.</p> --}}
       
@@ -69,7 +75,7 @@
                     <h3 class="aside-title">Kategori</h3>
                     <ul class="aside-links list-unstyled">
                       @foreach ($categories as $category)
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>{{ $category->name }}</a></li>
+                        <li><a href={{ url('kategori/'.$category->slug) }}><i class="bi bi-chevron-right"></i>{{ $category->name }}</a></li>
                       @endforeach
                     </ul>
                   </div><!-- End Categories -->

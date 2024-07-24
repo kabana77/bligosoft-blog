@@ -1,5 +1,7 @@
 @extends('front.layout.template')
 
+@section('title', 'Blog - Bligosoft')
+
 @section('main')
     <main id="main">
       <!-- ======= Hero Slider Section ======= -->
