@@ -19,11 +19,13 @@ class ArticleController extends Controller
     public function show($slug){
         $articles = Article::where('slug', $slug)->firstOrFail();
         $articles->increment('views');
+        $latest_posts = Article::where('slug', '!=', $slug)->take(3)->get();
 
         return view('front.article.show', [
             'article' => $articles,
             'otherArticles' => Article::where('slug', '!=', $slug)->take(10)->get(),
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'latest_posts' => $latest_posts
         ]);
     }
 }

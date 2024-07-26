@@ -20,7 +20,7 @@
                             {{ $latest->title }}
                           </h2>
                           <p>
-                            {{ Str::limit($latest->desc, 230, '...') }}
+                            {!! Str::limit($latest->desc, 230, '...') !!}
                           </p>
                         </div>
                       </a>
@@ -73,7 +73,7 @@
                       <a href="{{ url('p/'.$list_post->slug) }}">{{ $list_post->title }}</a>
                     </h2>
                     {{-- <span class="author mb-3 d-block">Jenny Wilson</span> --}}
-                    <p class="mb-4 d-block">{{ Str::limit($latest->desc, 150, '...') }}</p>
+                    <p class="mb-4 d-block">{!! Str::limit($latest->desc, 150, '...') !!}</p>
                   </div>
                   @endforeach
 
@@ -95,7 +95,7 @@
                       </h2>
                       {{-- <span class="author mb-3 d-block">Jenny Wilson</span> --}}
                       <p class="mb-4 d-block">
-                        {{ Str::limit($next_post->desc, 230, '...') }}
+                        {!! Str::limit($next_post->desc, 230, '...') !!}
                       </p>
                     </div>
                   @endforeach

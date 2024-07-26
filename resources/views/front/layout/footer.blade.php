@@ -45,9 +45,9 @@
                     <img src={{ asset('storage/back/'.$latest->img) }} alt="" class="img-fluid me-3"/>
                     <div>
                       <div class="post-meta d-block">
-                        <span class="date">Culture</span>
+                        <span class="date">{{ $latest->category->name }}</span>
                         <span class="mx-1">&bullet;</span>
-                        <span>Jul 5th '22</span>
+                        <span>{{ $latest->created_at->format('Y F d') }}</span>
                       </div>
                       <span>{{ $latest->title }}</span>
                     </div>
