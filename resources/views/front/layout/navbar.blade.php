@@ -3,9 +3,9 @@
         <div
           class="container-fluid container-xl d-flex align-items-center justify-content-between"
         >
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href={{ url('/')  }} class="logo d-flex align-items-center">
             <!-- Uncomment the line below if you also wish to use an image logo -->
-            {{-- <img src={{ asset("front/assets/img/logo.png") }} alt=""> --}}
+            {{-- <img src={{ asset("front/assets/img/logo.png') }} alt=""> --}}
             <h1>BligoSoft</h1>
           </a>
   
