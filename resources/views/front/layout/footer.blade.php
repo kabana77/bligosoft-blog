@@ -5,14 +5,9 @@
           <div class="col-lg-4">
             <h3 class="footer-heading">Tentang BligoSoft</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              ab, perspiciatis beatae autem deleniti voluptate nulla a
-              dolores, exercitationem eveniet libero laudantium recusandae
-              officiis qui aliquid blanditiis omnis quae. Explicabo?
+            Kami penyedia layanan pembuatan software kustom yang berfokus pada solusi inovatif dan efisien untuk memenuhi kebutuhan bisnis Anda.
             </p>
-            <p>
-              <a href="about.html" class="footer-link-more">Learn More</a>
-            </p>
+           
           </div>
           <div class="col-6 col-lg-2">
             <h3 class="footer-heading">Navigasi</h3>
@@ -44,86 +39,21 @@
             <h3 class="footer-heading">Tulisan Terbaru</h3>
 
             <ul class="footer-links footer-blog-entry list-unstyled">
-              <li>
-                <a href="single-post.html" class="d-flex align-items-center">
-                  <img
-                    src="front/assets/img/post-sq-1.jpg"
-                    alt=""
-                    class="img-fluid me-3"
-                  />
-                  <div>
-                    <div class="post-meta d-block">
-                      <span class="date">Culture</span>
-                      <span class="mx-1">&bullet;</span>
-                      <span>Jul 5th '22</span>
+              @foreach ( $latest_posts as $latest )
+                <li>
+                  <a href={{ url('p/'.$latest->slug) }} class="d-flex align-items-center">
+                    <img src={{ asset('storage/back/'.$latest->img) }} alt="" class="img-fluid me-3"/>
+                    <div>
+                      <div class="post-meta d-block">
+                        <span class="date">Culture</span>
+                        <span class="mx-1">&bullet;</span>
+                        <span>Jul 5th '22</span>
+                      </div>
+                      <span>{{ $latest->title }}</span>
                     </div>
-                    <span>5 Great Startup Tips for Female Founders</span>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="single-post.html" class="d-flex align-items-center">
-                  <img
-                    src="front/assets/img/post-sq-2.jpg"
-                    alt=""
-                    class="img-fluid me-3"
-                  />
-                  <div>
-                    <div class="post-meta d-block">
-                      <span class="date">Culture</span>
-                      <span class="mx-1">&bullet;</span>
-                      <span>Jul 5th '22</span>
-                    </div>
-                    <span
-                      >What is the son of Football Coach John Gruden, Deuce
-                      Gruden doing Now?</span
-                    >
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="single-post.html" class="d-flex align-items-center">
-                  <img
-                    src="front/assets/img/post-sq-3.jpg"
-                    alt=""
-                    class="img-fluid me-3"
-                  />
-                  <div>
-                    <div class="post-meta d-block">
-                      <span class="date">Culture</span>
-                      <span class="mx-1">&bullet;</span>
-                      <span>Jul 5th '22</span>
-                    </div>
-                    <span
-                      >Life Insurance And Pregnancy: A Working Mom’s
-                      Guide</span
-                    >
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="single-post.html" class="d-flex align-items-center">
-                  <img
-                    src="front/assets/img/post-sq-4.jpg"
-                    alt=""
-                    class="img-fluid me-3"
-                  />
-                  <div>
-                    <div class="post-meta d-block">
-                      <span class="date">Culture</span>
-                      <span class="mx-1">&bullet;</span>
-                      <span>Jul 5th '22</span>
-                    </div>
-                    <span
-                      >How to Avoid Distraction and Stay Focused During Video
-                      Calls?</span
-                    >
-                  </div>
-                </a>
-              </li>
+                  </a>
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>
@@ -135,8 +65,7 @@
         <div class="row justify-content-between">
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <div class="copyright">
-              © Copyright <strong><span>BligoSoft</span></strong
-              >. All Rights Reserved
+              © Copyright <strong><span>BligoSoft</span></strong>. All Rights Reserved
             </div>
           </div>
 
