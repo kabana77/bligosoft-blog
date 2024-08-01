@@ -7,6 +7,8 @@ use App\Http\Controllers\Front\CategoryController as FrontCategoryController;
 use App\Http\Controllers\Back\DashboardController;
 use App\Http\Controllers\Back\UserController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\AboutController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +20,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/p/{slug}', [FrontArticleController::class, 'show']);
 Route::get('/artikel', [FrontArticleController::class, 'index']);
+Route::get('/kontak', [ContactController::class, 'index']);
 Route::get('kategori/{slug}', [FrontCategoryController::class, 'index']);
+Route::get('/tentang-kami', [AboutController::class, 'index']);
 
 Route::middleware('auth')->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index']); 

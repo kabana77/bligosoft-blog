@@ -7,24 +7,20 @@
         <section class="single-post-content">
             <div class="container">
               <div class="row">
-                <div class="col-md-9 post-content" data-aos="fade-up">
+                  <div class="col-md-9 post-content" data-aos="fade-up">
                     @foreach ($articles as $article)
                         <div class="d-md-flex post-entry-2 small-img">
                             <a href={{ url('p/'.$article->slug) }} class="me-4 thumbnail">
                             <img src={{ asset('storage/back/' . $article->img) }} alt="" class="img-fluid">
                             </a>
                             <div>
-                            <div class="post-meta"><span class="date">{{ $article->category->name }}</span> <span class="mx-1">&bullet;</span> <span>{{ $article->created_at->format('Y F d') }}</span></div>
-                            <h3><a href={{ url('p/'.$article->slug) }}>{{ $article->title }}</p>
+                              <div class="post-meta"><span class="date">{{ $article->category->name }}</span> <span class="mx-1">&bullet;</span> <span>{{ $article->created_at->format('Y F d') }}</span></div>
+                              <h3><a href={{ url('p/'.$article->slug) }}>{{ $article->title }}</p>
                             </div>
                         </div>
                     @endforeach
-                    
-           {{ $articles->links('front.layout.pagination') }}
-
-
-      
-                </div>
+                  </div>
+                  {{ $articles->links('front.layout.pagination') }}
                 <div class="col-md-3">
                   <!-- ======= Sidebar ======= -->
                   <div class="aside-block">

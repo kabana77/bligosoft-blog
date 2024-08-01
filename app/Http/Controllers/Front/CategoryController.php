@@ -12,9 +12,7 @@ class CategoryController extends Controller
     public function index($slugCategory){
         $latest_posts = Article::take(3)->get();
         return view('front.category.index', [
-            'articles' => Article::whereHas('Category', function($q) use ($slugCategory){
-                $q->where('slug', $slugCategory);
-            })->latest()->paginate(9),
+            'articles' => Article::whereHas('Category', function($q) use ($slugCategory){ $q->where('slug', $slugCategory); })->where('status','1')->latest()->paginate(9),
             'categories' => Category::where('name', '!=', $slugCategory )->latest()->get(),
             'latest_posts' => $latest_posts
         ]);

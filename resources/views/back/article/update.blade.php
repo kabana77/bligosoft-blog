@@ -83,6 +83,11 @@
                         </div>
 
                         <div class="mb-3">
+                          <label for="alt" class="form-label">Image Text</label>
+                          <input type="text" class="form-control" name="alt" id="alt" value="{{ old('alt', $article->alt) }}">
+                        </div>
+
+                        <div class="mb-3">
                             <label for="status" class="form-label">Status</label>
                             <select id="status" name="status" class="form-select" aria-label="Default select example">
                                 <option value="0" {{ $article->status == 0 ? 'selected' : null }}>Draft</option>

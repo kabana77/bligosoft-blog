@@ -100,14 +100,6 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        // $data = Article::find($id);
-        // Storage::delete('public/back/'.$data->img);
-        // $data->delete();
-
-        // return response()->json([
-        //     'message' => 'Article deleted successfully'
-        // ]);
-
         // Dapatkan artikel berdasarkan id
         $article = Article::find($id);
 

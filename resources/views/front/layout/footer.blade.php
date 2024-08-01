@@ -5,7 +5,7 @@
           <div class="col-lg-4">
             <h3 class="footer-heading">Tentang BligoSoft</h3>
             <p>
-            Kami penyedia layanan pembuatan software kustom yang berfokus pada solusi inovatif dan efisien untuk memenuhi kebutuhan bisnis Anda.
+            Kami melayani pembuatan software kustom yang berfokus pada solusi inovatif dan efisien untuk memenuhi kebutuhan bisnis Anda.
             </p>
            
           </div>
