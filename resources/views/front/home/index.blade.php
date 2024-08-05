@@ -48,10 +48,8 @@
       <section class="category-section">
         <div class="container" data-aos="fade-up">
           <div
-            class="section-header d-flex justify-content-between align-items-center mb-5"
-          >
+            class="section-header d-flex justify-content-between align-items-center mb-5">
             <h2>Blog</h2>
-            {{-- <div><a href="category.html" class="more">Semua Artikel</a></div> --}}
           </div>
 
           <div class="row">
@@ -59,9 +57,6 @@
 
               <div class="row">
                 <div class="col-lg-4">
-
-            
-
                   @foreach ($side_list_posts as $list_post)  
                   <div class="post-entry-1">
                     <div class="post-meta">
@@ -107,10 +102,7 @@
             </div>
 
             {{-- sidebar --}}
-            @include('front.layout.sidebar')
-
-
-            
+            @include('front.layout.sidebar')            
           </div>
         </div>
       </section>

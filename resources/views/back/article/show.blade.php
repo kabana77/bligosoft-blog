@@ -41,6 +41,7 @@
                   <th scope="row">Image</th>
                   <td>
                     <img src="{{ asset('storage/back/'.$article->img) }}" width="50%">
+                    <p><?= $article->img_caption ?></p>
                   </td>
                 </tr>
                 <tr>

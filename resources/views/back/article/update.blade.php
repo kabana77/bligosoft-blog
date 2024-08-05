@@ -83,8 +83,8 @@
                         </div>
 
                         <div class="mb-3">
-                          <label for="alt" class="form-label">Image Text</label>
-                          <input type="text" class="form-control" name="alt" id="alt" value="{{ old('alt', $article->alt) }}">
+                          <label for="img_caption" class="form-label">Image Text</label>
+                          <input type="text" class="form-control" name="img_caption" id="img_caption" value="{{ old('img_caption', $article->img_caption) }}">
                         </div>
 
                         <div class="mb-3">

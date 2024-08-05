@@ -76,8 +76,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="alt" class="form-label">Image Text</label>
-                            <input type="text" class="form-control" name="alt" id="alt" placeholder="Type text img">
+                            <label for="img_caption" class="form-label">Image Text</label>
+                            <input type="text" class="form-control" name="img_caption" id="img_caption" placeholder="Type text img">
                         </div>
 
                         <div class="mb-3">

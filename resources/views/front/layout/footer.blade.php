@@ -4,9 +4,7 @@
         <div class="row g-5">
           <div class="col-lg-4">
             <h3 class="footer-heading">Tentang BligoSoft</h3>
-            <p>
-            Kami melayani pembuatan software kustom yang berfokus pada solusi inovatif dan efisien untuk memenuhi kebutuhan bisnis Anda.
-            </p>
+            <p>Bligosoft merupakan vendor teknologi yang berfokus pada pembuatan software kustom sesuai dengan kebutuhan spesifik setiap klien. Kami berdedikasi untuk memberikan solusi teknologi inovatif dan berkualitas tinggi yang dapat diandalkan untuk meningkatkan efisiensi dan produktivitas bisnis Anda.</p>
            
           </div>
           <div class="col-6 col-lg-2">

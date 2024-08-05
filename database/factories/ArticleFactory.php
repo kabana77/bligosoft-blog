@@ -26,7 +26,7 @@ class ArticleFactory extends Factory
             'slug' => fake()->slug(),
             'desc' => fake()->paragraph(),
             'img'=> fake()->image('public/storage/back', 1947, 843, null, false),
-            'alt' => 'alt image text',
+            'img_caption' => 'image caption text',
             'views' => 0,
             'status' => 0
         ];

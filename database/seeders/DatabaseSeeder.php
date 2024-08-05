@@ -26,6 +26,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'Programming',
             'slug' => 'programming',
         ]);
+        Category::create([
+            'name' => 'Sejarah',
+            'slug' => 'sejarah',
+        ]);
+        Category::create([
+            'name' => 'Opini',
+            'slug' => 'opini',
+        ]);
 
         Article::factory(10)->create();
     }
