@@ -8,25 +8,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ url('dashboard') }}">
+            <a class="nav-link {{ $activePage == 'dashboard' ? 'active' : '' }}" aria-current="page" href="{{ url('dashboard') }}">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('articles') }}">
+            <a class="nav-link {{ $activePage == 'articles' ? 'active' : '' }}" href="{{ url('articles') }}">
               <span data-feather="file" class="align-text-bottom"></span>
               Articles
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('categories') }}">
+            <a class="nav-link {{ $activePage == 'categories' ? 'active' : '' }}" href="{{ url('categories') }}">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
               Categories
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('users') }}">
+            <a class="nav-link {{ $activePage == 'users' ? 'active' : '' }}" href="{{ url('users') }}">
               <span data-feather="users" class="align-text-bottom"></span>
               Users
             </a>

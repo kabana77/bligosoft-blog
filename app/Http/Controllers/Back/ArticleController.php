@@ -19,7 +19,8 @@ class ArticleController extends Controller
     public function index()
     {
         return view('back.article.index', [
-            'articles' => Article::with('Category')->latest()->get()
+            'articles' => Article::with('Category')->latest()->get(),
+            'activePage' => 'articles'
         ]);
     }
 
@@ -29,7 +30,8 @@ class ArticleController extends Controller
     public function create()
     {
         return view('back.article.create', [
-            'categories' => Category::get()
+            'categories' => Category::get(),
+            'activePage' => 'articles'
         ]);
     }
 
@@ -58,7 +60,8 @@ class ArticleController extends Controller
     public function show(string $id)
     {
         return view('back.article.show', [
-            'article' => Article::find($id)
+            'article' => Article::find($id),
+            'activePage' => 'articles'
         ]);
     }
 
@@ -69,7 +72,8 @@ class ArticleController extends Controller
     {
         return view('back.article.update', [
             'article' => Article::find($id),
-            'categories' => Category::get()
+            'categories' => Category::get(),
+            'activePage' => 'articles'
         ]);
     }
 

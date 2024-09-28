@@ -10,7 +10,8 @@ class UserController extends Controller
 {
     public function index(){
         return view('back.user.index', [
-            'users' => User::latest()->get()
+            'users' => User::latest()->get(),
+            'activePage' => 'users'
         ]);
     }
 }

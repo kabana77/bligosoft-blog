@@ -20,7 +20,7 @@
                             {{ $latest->title }}
                           </h2>
                           <p>
-                            {{ Str::limit($latest->desc, 230, '...') }}
+                            {!! Str::limit($latest->desc, 230, '...') !!}
                           </p>
                         </div>
                       </a>
